@@ -12,7 +12,6 @@ export class LoginPage {
     });
 
   
-
     }
   
     setClickOnRegister(){
@@ -20,13 +19,46 @@ export class LoginPage {
       cy.get('.Header_register-btn__90TWH').click()
     }
   
+    setEnterOrgName(org){
+       cy.get('.login-org').type(org)
+      
+    }
+
+    setClickOnOrgLoginButton(){
+       cy.get('.mna-btn-primary').click()
+    }
 
 
+    setEnterUserNameFirstTime(){
+      cy.origin(this.originURL,()=>{ 
+        cy.get('#username').type('eslamelshamy1992+1@gmail.com')
 
+      });
+    }
+    setEnterUserName(){
+      cy.origin(this.originURL,()=>{ 
+        cy.get('#username').type('eslam_shamy+4@hotmail.com')
 
+      });
+    }
 
+    setEnterUserPassword(){
+      cy.origin(this.originURL,()=>{ 
+        cy.get('#password').type('55555Eslam@')
 
+      });
+    }
 
+    setClickOnUserLoginButton(){
+      cy.origin(this.originURL,()=>{ 
+        cy.get('#kc-login').click()
+      });
+    }
+
+    setConfirmationMessageIsDisplayed(){
+
+      cy.get('.flex-grow-1').should('be.visible') 
+    }
 
 
 

@@ -1,7 +1,7 @@
 export class RegisterPage {
 
 
-setClickOnOrgRegister(){
+setClickOnOrgCard(){
 
     cy.get('.LoginTypes_side-block-org__LBdVW').click()
 }
@@ -84,6 +84,12 @@ setCreateIndividualAccount(){
     cy.get('.btn').click()
 }
 
+ generateRandomEmail() {
+    const randomString = Math.random().toString(36).substring(2, 10);
+    const domain = ['gmail.com', 'yahoo.com', 'hotmail.com'];
+    const randomDomain = domain[Math.floor(Math.random() * domain.length)];
+    return `${randomString}@${randomDomain}`;
+  }
 
 
 

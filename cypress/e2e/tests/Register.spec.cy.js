@@ -3,23 +3,25 @@ import { LoginPage } from "../PageObjects/LoginPage";
 import { RegisterPage } from "../PageObjects/RegisterPage";
 const login= new LoginPage(); 
 const register = new RegisterPage();
-
+const username= faker.person.middleName()
+const email= faker.internet.email()
 describe('Registration Test Cases', () => {
     beforeEach(() => {
         cy.visit('/penta-app-admin-guardian/login/org')
+       
       })
-    it('the user should be able to register as Organization successfully ', () => {
+    it.only('the user should be able to register as Organization successfully ', () => {
       login.setClickOnRegister();
-      register.setClickOnOrgRegister()
+      register.setClickOnOrgCard()
       register.setDisclaimerAgreement();
-      register.setOrgName('Liverpool');
-      register.setEmail('eslamelshamy1992+1@gmail.com');
+      register.setOrgName(username);
+      register.setEmail(email);
       register.setPhoneNumber();
       register.setPassword();
       register.setConfirmPassword();
       register.setClickOnRegisterButton();
       //assert that confirmation message is displayed
-      cy.get('.flex-grow-1').should('be.visible') 
+      login.setConfirmationMessageIsDisplayed()
      
     })
 
@@ -29,13 +31,14 @@ describe('Registration Test Cases', () => {
       register.setDisclaimerAgreement()
       register.setIndividualFirstName('Eslam')
       register.setIndividualLastName('Elshamy')
-      register.setEnterTheUserName(faker.person.middleName())
-      register.setIndividualEmail(faker.internet.email())
+      register.setEnterTheUserName(username)
+      register.setIndividualEmail(email)
       register.setIndividualPassword('55555Eslam@')
       register.setIndividualConfirmPassword('55555Eslam@')
       register.setCreateIndividualAccount()
       //assert that confirmation message is displayed
-      cy.get('.flex-grow-1').should('be.visible') 
+      login.setConfirmationMessageIsDisplayed()
      
     })
   })
+  
