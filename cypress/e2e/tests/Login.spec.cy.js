@@ -11,7 +11,7 @@ describe('Login Test Cases', () => {
            
       })
 
-    it('check login as organization with a valid data for the fisrt time ', () => {
+    it.only('check login as organization with a valid data for the fisrt time ', () => {
       register.setClickOnOrgCard()
       login.setEnterOrgName('Liverpool')
       login.setClickOnOrgLoginButton()
@@ -24,7 +24,7 @@ describe('Login Test Cases', () => {
      
     })
 
-    it.only('check login as organization with a valid data ', () => {
+    it('check login as organization with a valid data ', () => {
       register.setClickOnOrgCard()
       login.setEnterOrgName('elshamy')
       login.setClickOnOrgLoginButton()
@@ -37,7 +37,7 @@ describe('Login Test Cases', () => {
      
     })
 
-    it.only('check login as Individual User with a valid data ', () => {
+    it('check login as Individual User with a valid data ', () => {
       register.setClickOnIndividualUser()
       login.setEnterUserName()
       login.setEnterUserPassword()

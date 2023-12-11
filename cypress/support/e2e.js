@@ -18,6 +18,7 @@ import './commands'
  // failing the test
    return false
    })
+   import 'cypress-file-upload';
 // Import commands.js using ES2015 syntax:
 import './commands'
 import 'cypress-file-upload';

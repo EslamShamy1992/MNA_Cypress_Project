@@ -19,8 +19,7 @@ describe('Layers Test Cases', () => {
         loginpage.setClickOnUserLoginButton()
       })
       
-      it.only('check that the user can contribute a layer successfully', () => {
-
+      it('check that the user can contribute a layer successfully', () => {
         //homepage.setMycontributionsButton()
         homepage.setClickOnLayersButton()
         layerpage.setOnBoardButton()
@@ -31,6 +30,8 @@ describe('Layers Test Cases', () => {
         layerpage.setClickOnConnectButton()
         layerpage.setEnterAlias('hello layers')
         layerpage.setDescriptionField('this is the first layer')
+        layerpage.setUploadSampleFile()
+        layerpage.setUploadSupportingFile()
         layerpage.setNextButtonSpecifyStep()
         layerpage.setIsBasic()
         layerpage.setIsID()
@@ -38,10 +39,8 @@ describe('Layers Test Cases', () => {
         layerpage.setClickOnSaveButtonPreviewStep()
         //assert that on board button is visible
         layerpage.setAssertVisibleText('On-Board')
-
-       
-
-         
+ 
       })
     
+     
 })

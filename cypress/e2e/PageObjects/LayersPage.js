@@ -7,7 +7,7 @@ export default class LayersPage{
     }
 
 
-    setSelectLanguage(language){
+    setSelectLanguage(){
 
         cy.get(':nth-child(1) > .Checkbox_container__xEcJj > .Checkbox_check-container__KYtui > .Checkbox_checkmark__Huc6G').click()
     }
@@ -59,10 +59,10 @@ export default class LayersPage{
 
 
     setUploadSampleFile(){
-        cy.get(':nth-child(1) > .BaseInput_input-container__AAt\+t > .FileUploadInput_upload-container__aIhLl > .mna-btn-md').type('ss.png')
+        cy.get('input[id="sampleData-add"]').attachFile('file.zip',{force:true})
     }
     setUploadSupportingFile(){
-        cy.get(':nth-child(2) > .BaseInput_input-container__AAt\+t > .FileUploadInput_upload-container__aIhLl > .mna-btn-md').type('ss.png')
+        cy.get('input[id="supportingFiles-add"]',).attachFile('ss.png',{force:true})
     }
 
 
