@@ -40,21 +40,21 @@ export default class LayersPage{
         cy.get('textarea[name="description"]').type(description)
     }
 
-    setEnableEditCapabilities(){
+    setEnableOrDisableEditCapabilities(){
 
         cy.get('input[name="enableEdit"]').click()
 
     
     }
 
-    setEnableSearchCapabilities(){
+    setEnableorDisableSearchCapabilities(){
 
         cy.get('input[name="enableSearch"]').click()
     }
 
-    setEnablePrintCapabilities(){
+    setEnableOrDisablePrintCapabilities(){
 
-        cy.get('input[nname="enablePrint"]').click()
+        cy.get('input[name="enablePrint"]').click({force:true})
     }
 
 
@@ -101,5 +101,9 @@ setClickOnSaveButtonPreviewStep(){
 
 setAssertVisibleText(){
     cy.get('a[href="/penta-app-admin-guardian/connectwizard"]').should('be.visible')
+}
+
+setAssertThatBasicInfoIsDisplayed(basicinfo){
+    cy.get(':nth-child(1) > .SectionHeader_header__lknUG > .SectionHeader_title__bj5EQ').should('have.text',basicinfo)
 }
 }

@@ -11,7 +11,7 @@ describe('Login Test Cases', () => {
            
       })
 
-    it.only('check login as organization with a valid data for the fisrt time ', () => {
+    it('check login as organization with a valid data for the fisrt time ', () => {
       register.setClickOnOrgCard()
       login.setEnterOrgName('Liverpool')
       login.setClickOnOrgLoginButton()

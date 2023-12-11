@@ -10,8 +10,20 @@ export class LoginPage {
             cy.get('#kc-login').click()
            
     });
-
   
+    }
+    
+    setLoginWithguardianOrg(){
+      
+      cy.get('.LoginTypes_side-block-org__LBdVW').click()
+      cy.get('.login-org').type('liverpool')
+      cy.get('.mna-btn-primary').click()
+      cy.origin(this.originURL,()=>{ 
+        cy.get('#username').type('eslamelshamy1992+1@gmail.com')
+        cy.get('#password').type('55555Eslam@')
+        cy.get('#kc-login').click()
+
+      });
     }
   
     setClickOnRegister(){
