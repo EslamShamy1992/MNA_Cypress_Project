@@ -74,6 +74,9 @@ export default class{
 
         cy.get('a[id="mna.catalogues.contribution.lookups.btnCreate"]').should('be.visible')
     }
+    setAssertThatBasicInfoIsDisplayed(basicinfo){
+        cy.get('span[class="SectionHeader_title__bj5EQ"]').should('be.visible')
+    }
     
     
 

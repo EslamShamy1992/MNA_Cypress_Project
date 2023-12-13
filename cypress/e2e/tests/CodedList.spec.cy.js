@@ -8,12 +8,12 @@ const loginpage= new LoginPage()
 
  describe('Coded lists Test Cases', () => {
     beforeEach(() => {
-        cy.visit('/penta-app-admin-guardian/login')
+        cy.visit('/penta-app-admin-guardian/login',)
         loginpage.setLoginWithguardianOrg()
        
       })
       
-      it.only('check that the user can contribute a coded lists successfully', () => {
+      it('1-check that the user can contribute a coded lists successfully', () => {
       
         codedlist.setClickOnCodedListsButton()
         codedlist.setCreateNewCodedListButton()
@@ -27,8 +27,100 @@ const loginpage= new LoginPage()
         codedlist.setPrintablebutton()
         codedlist.setNextButtonCodedlistInfoStep()
         codedlist.setSaveButton()
-        // assert that the coded list button is visible
+        // assert that the coded list button is visible 
         codedlist.setAssertThatcreatecodedlistbuttonIsVisible()
+ 
+      })
+
+      it('2-check contribute coded list while leaving all mandatory fields empty ', () => {
+      
+        codedlist.setClickOnCodedListsButton()
+        codedlist.setCreateNewCodedListButton()
+        codedlist.setSelectLanguage()
+        codedlist.setClickOnNextButton()
+        codedlist.setNextButtonCodedlistInfoStep()
+         //assert that Basic Information is Displayed
+         codedlist.setAssertThatBasicInfoIsDisplayed()
+        
+        
+ 
+      })
+
+      it('3-check skip coded list name by entering whitesapces', () => {
+      
+        codedlist.setClickOnCodedListsButton()
+        codedlist.setCreateNewCodedListButton()
+        codedlist.setSelectLanguage()
+        codedlist.setClickOnNextButton()
+        codedlist.setCodedListName('    ')
+        codedlist.setAlias(faker.person.firstName())
+        codedlist.setCodedListDescription(faker.person.fullName())
+        codedlist.setEditablebutton()
+        codedlist.setSearchablebutton()
+        codedlist.setPrintablebutton()
+        codedlist.setNextButtonCodedlistInfoStep()
+         //assert that Basic Information is Displayed
+         codedlist.setAssertThatBasicInfoIsDisplayed()
+        
+        
+ 
+      })
+
+      it('4-check skip Alias field by entering whitesapces', () => {
+      
+        codedlist.setClickOnCodedListsButton()
+        codedlist.setCreateNewCodedListButton()
+        codedlist.setSelectLanguage()
+        codedlist.setClickOnNextButton()
+        codedlist.setCodedListName(faker.person.firstName())
+        codedlist.setAlias('    ')
+        codedlist.setCodedListDescription(faker.person.fullName())
+        codedlist.setEditablebutton()
+        codedlist.setSearchablebutton()
+        codedlist.setPrintablebutton()
+        codedlist.setNextButtonCodedlistInfoStep()
+         //assert that Basic Information is Displayed
+         codedlist.setAssertThatBasicInfoIsDisplayed()
+        
+        
+ 
+      })
+
+      it('5-check skip Description field by entering whitesapces', () => {
+      
+        codedlist.setClickOnCodedListsButton()
+        codedlist.setCreateNewCodedListButton()
+        codedlist.setSelectLanguage()
+        codedlist.setClickOnNextButton()
+        codedlist.setCodedListName(faker.person.firstName())
+        codedlist.setAlias(faker.person.firstName())
+        codedlist.setCodedListDescription('    ')
+        codedlist.setEditablebutton()
+        codedlist.setSearchablebutton()
+        codedlist.setPrintablebutton()
+        codedlist.setNextButtonCodedlistInfoStep()
+         //assert that Basic Information is Displayed
+         codedlist.setAssertThatBasicInfoIsDisplayed()
+        
+        
+ 
+      })
+
+      
+      it('6-check skip Capabilities field', () => {
+      
+        codedlist.setClickOnCodedListsButton()
+        codedlist.setCreateNewCodedListButton()
+        codedlist.setSelectLanguage()
+        codedlist.setClickOnNextButton()
+        codedlist.setCodedListName(faker.person.firstName())
+        codedlist.setAlias(faker.person.firstName())
+        codedlist.setCodedListDescription(faker.person.fullName())
+        codedlist.setNextButtonCodedlistInfoStep()
+         //assert that Basic Information is Displayed
+         codedlist.setAssertThatBasicInfoIsDisplayed()
+        
+        
  
       })
 
