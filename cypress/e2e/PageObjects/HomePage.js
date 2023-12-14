@@ -16,7 +16,7 @@ export default class HomePage{
 
 setClickOnProfileMenu(){
 
-    cy.get('.ProfileButton_container-padding__rsCHT').click()
+    cy.get('.ProfileButton_menu-image__6ukP- > img').click()
 }
 
     setClickOnManageSubscription(){

@@ -10,7 +10,7 @@ describe('Registration Test Cases', () => {
         cy.visit('/penta-app-admin-guardian/login/org')
        
       })
-    it.only('the user should be able to register as Organization successfully ', () => {
+    it('TC-1the user should be able to register as Organization successfully ', () => {
       login.setClickOnRegister();
       register.setClickOnOrgCard()
       register.setDisclaimerAgreement();
@@ -25,7 +25,7 @@ describe('Registration Test Cases', () => {
      
     })
 
-    it('the user should be able to register as individual successfully ', () => {
+    it('TC2-the user should be able to register as individual successfully ', () => {
       login.setClickOnRegister();
       register.setClickOnIndividualUser()
       register.setDisclaimerAgreement()

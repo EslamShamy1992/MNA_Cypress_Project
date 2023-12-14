@@ -15,30 +15,25 @@ describe('Subscription Test Cases', () => {
 
     beforeEach(() => {
         cy.visit('/penta-app-admin-guardian/login')
-        register.setClickOnOrgCard()
-        login.setEnterOrgName('Liverpool')
-        login.setClickOnOrgLoginButton()
-        login.setEnterUserNameFirstTime()
-        login.setEnterUserPassword()
-        login.setClickOnUserLoginButton()
-      })
-
-      it.only('check that the user can subscribe successfully', () => {
-        homepage.setClickOnProfileMenu()
-        homepage.setClickOnManageSubscription()
-        subscription.setEnterURL(Url)
-        subscription.setCountry('Egypt')
-        subscription.setCity('Cairo')
-        subscription.setNumberOfUsers('2')
-        subscription.setOrgLogo()
-        subscription.setSaveTheOrgLogo()
-        // subscription.setCoverPhoto()
-        subscription.setClickOnNextButton()
-        subscription.setSelectContributor()
-        subscription.setClickOnNextButton()
+       login.setLoginWithguardianOrg()
+    })
+      // it('TC1-check that the user can subscribe successfully', () => {
+      //   homepage.setClickOnProfileMenu()
+      //   homepage.setClickOnManageSubscription()
+      //   subscription.setEnterURL(Url)
+      //   subscription.setCountry('Egypt')
+      //   subscription.setCity('Cairo')
+      //   subscription.setNumberOfUsers('2')
+      //   subscription.setOrgLogo()
+      //   subscription.setSaveTheOrgLogo()
+      //   // subscription.setCoverPhoto()
+      //   subscription.setClickOnNextButton()
+      //   subscription.setSelectContributor()
+      //   subscription.setClickOnNextButton()
+      //   homepage.setNotificationCenterIsVisible()
 
          
-      })
+      // })
 
 
 

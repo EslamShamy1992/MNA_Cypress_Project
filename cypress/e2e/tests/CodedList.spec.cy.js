@@ -13,7 +13,7 @@ const loginpage= new LoginPage()
        
       })
       
-      it('1-check that the user can contribute a coded lists successfully', () => {
+      it('TC1-check that the user can contribute a coded lists successfully', () => {
       
         codedlist.setClickOnCodedListsButton()
         codedlist.setCreateNewCodedListButton()
@@ -32,7 +32,7 @@ const loginpage= new LoginPage()
  
       })
 
-      it('2-check contribute coded list while leaving all mandatory fields empty ', () => {
+      it('TC2-check contribute coded list while leaving all mandatory fields empty ', () => {
       
         codedlist.setClickOnCodedListsButton()
         codedlist.setCreateNewCodedListButton()
@@ -46,7 +46,7 @@ const loginpage= new LoginPage()
  
       })
 
-      it('3-check skip coded list name by entering whitesapces', () => {
+      it('TC3-check skip coded list name by entering whitesapces', () => {
       
         codedlist.setClickOnCodedListsButton()
         codedlist.setCreateNewCodedListButton()
@@ -66,7 +66,7 @@ const loginpage= new LoginPage()
  
       })
 
-      it('4-check skip Alias field by entering whitesapces', () => {
+      it('TC4-check skip Alias field by entering whitesapces', () => {
       
         codedlist.setClickOnCodedListsButton()
         codedlist.setCreateNewCodedListButton()
@@ -86,7 +86,7 @@ const loginpage= new LoginPage()
  
       })
 
-      it('5-check skip Description field by entering whitesapces', () => {
+      it('TC5-check skip Description field by entering whitesapces', () => {
       
         codedlist.setClickOnCodedListsButton()
         codedlist.setCreateNewCodedListButton()
@@ -107,7 +107,7 @@ const loginpage= new LoginPage()
       })
 
       
-      it('6-check skip Capabilities field', () => {
+      it('TC6-check skip Capabilities field', () => {
       
         codedlist.setClickOnCodedListsButton()
         codedlist.setCreateNewCodedListButton()

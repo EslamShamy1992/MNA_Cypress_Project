@@ -7,8 +7,7 @@ export class LoginPage {
         cy.origin(this.originURL,()=>{ 
             cy.get('#username').type('eslam_shamy+4@hotmail.com')
             cy.get('#password').type('55555Eslam@')
-            cy.get('#kc-login').click()
-           
+            cy.get('#kc-login').click()   
     });
   
     }

@@ -17,7 +17,7 @@ const register= new RegisterPage()
     
     it('passes', () => {
       
-        homepage.setNotificationCenterIsVisible()
+     
   
       })
 

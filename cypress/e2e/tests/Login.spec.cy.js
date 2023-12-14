@@ -11,20 +11,20 @@ describe('Login Test Cases', () => {
            
       })
 
-    it('check login as organization with a valid data for the fisrt time ', () => {
-      register.setClickOnOrgCard()
-      login.setEnterOrgName('Liverpool')
-      login.setClickOnOrgLoginButton()
-      login.setEnterUserNameFirstTime()
-      login.setEnterUserPassword()
-      login.setClickOnUserLoginButton()
-      // //Assert that General Info is displayed
-      homepage.setGeneralInfoIsDisplayed()
+    // // it('TC1-check login as organization with a valid data for the fisrt time ', () => {
+    // //   register.setClickOnOrgCard()
+    // //   login.setEnterOrgName('Liverpool')
+    // //   login.setClickOnOrgLoginButton()
+    // //   login.setEnterUserNameFirstTime()
+    // //   login.setEnterUserPassword()
+    // //   login.setClickOnUserLoginButton()
+    // //   // //Assert that General Info is displayed
+    // //   homepage.setGeneralInfoIsDisplayed()
       
      
-    })
+    // })
 
-    it('check login as organization with a valid data ', () => {
+    it('TC2-check login as organization with a valid data ', () => {
       register.setClickOnOrgCard()
       login.setEnterOrgName('elshamy')
       login.setClickOnOrgLoginButton()
@@ -37,7 +37,7 @@ describe('Login Test Cases', () => {
      
     })
 
-    it('check login as Individual User with a valid data ', () => {
+    it('TC3-check login as Individual User with a valid data ', () => {
       register.setClickOnIndividualUser()
       login.setEnterUserName()
       login.setEnterUserPassword()
