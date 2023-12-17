@@ -8,7 +8,7 @@ const loginpage= new LoginPage()
 
  describe('Coded lists Test Cases', () => {
     beforeEach(() => {
-        cy.visit('/penta-app-admin-guardian/login',)
+        cy.visit('/penta-app-admin-guardian/login')
         loginpage.setLoginWithguardianOrg()
        
       })
@@ -107,7 +107,7 @@ const loginpage= new LoginPage()
       })
 
       
-      it('TC6-check skip Capabilities field', () => {
+      it.only('TC6-check skip Capabilities field', () => {
       
         codedlist.setClickOnCodedListsButton()
         codedlist.setCreateNewCodedListButton()

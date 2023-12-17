@@ -1,6 +1,6 @@
 export class LoginPage {
     constructor() {
-        this.originURL = 'https://devstable.eastus.cloudapp.azure.com:8443';
+        this.originURL = 'http://devstable.eastus.cloudapp.azure.com:8043';
       }
     setAdminUser(){
        
