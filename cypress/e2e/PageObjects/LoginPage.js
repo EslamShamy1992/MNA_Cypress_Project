@@ -1,26 +1,31 @@
+import { Login } from "./Locators";
 export class LoginPage {
     constructor() {
-        this.originURL = 'http://devstable.eastus.cloudapp.azure.com:8043';
+        this.originURL = 'https://devstable.eastus.cloudapp.azure.com:8443';
       }
+
+
+      
+
+      
     setAdminUser(){
        
         cy.origin(this.originURL,()=>{ 
-            cy.get('#username').type('eslam_shamy+4@hotmail.com')
-            cy.get('#password').type('55555Eslam@')
-            cy.get('#kc-login').click()   
+            cy.get('input[id="username"]').type('eslam_shamy+4@hotmail.com')
+            cy.get('input[id="password"]').type('55555Eslam@')
+            cy.get('input[id="kc-login"]').click()   
     });
   
     }
     
     setLoginWithguardianOrg(){
-      
-      cy.get('.LoginTypes_side-block-org__LBdVW').click()
+      cy.get('.LoginTypes_org-icon__ru7AT').click()
       cy.get('.login-org').type('liverpool')
       cy.get('.mna-btn-primary').click()
       cy.origin(this.originURL,()=>{ 
-        cy.get('#username').type('eslamelshamy1992+1@gmail.com')
-        cy.get('#password').type('55555Eslam@')
-        cy.get('#kc-login').click()
+        cy.get('input[id="username"]').type('eslamelshamy1992+1@gmail.com')
+        cy.get('input[id="password"]').type('55555Eslam@')
+        cy.get('input[id="kc-login"]').click()
 
       });
     }
@@ -42,27 +47,27 @@ export class LoginPage {
 
     setEnterUserNameFirstTime(){
       cy.origin(this.originURL,()=>{ 
-        cy.get('#username').type('eslamelshamy1992+1@gmail.com')
+        cy.get('input[id="username"]').type('eslamelshamy1992+1@gmail.com')
 
       });
     }
     setEnterUserName(){
       cy.origin(this.originURL,()=>{ 
-        cy.get('#username').type('eslam_shamy+4@hotmail.com')
+        cy.get('input[id="username"]').type('eslam_shamy+4@hotmail.com')
 
       });
     }
 
     setEnterUserPassword(){
       cy.origin(this.originURL,()=>{ 
-        cy.get('#password').type('55555Eslam@')
+        cy.get('input[id="password"]').type('55555Eslam@')
 
       });
     }
 
     setClickOnUserLoginButton(){
       cy.origin(this.originURL,()=>{ 
-        cy.get('#kc-login').click()
+        cy.get('input[id="kc-login"]').click()
       });
     }
 

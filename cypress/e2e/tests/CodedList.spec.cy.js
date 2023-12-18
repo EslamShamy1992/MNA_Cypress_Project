@@ -107,7 +107,7 @@ const loginpage= new LoginPage()
       })
 
       
-      it.only('TC6-check skip Capabilities field', () => {
+      it('TC6-check skip Capabilities field', () => {
       
         codedlist.setClickOnCodedListsButton()
         codedlist.setCreateNewCodedListButton()
@@ -123,6 +123,139 @@ const loginpage= new LoginPage()
         
  
       })
+
+      it.only('TC7-check that the user can upload and replace csv file in manage table', () => {
+      
+        codedlist.setClickOnCodedListsButton()
+        codedlist.setCreateNewCodedListButton()
+        codedlist.setSelectLanguage()
+        codedlist.setClickOnNextButton()
+        codedlist.setCodedListName(faker.person.lastName())
+        codedlist.setAlias('Coded List')
+        codedlist.setCodedListDescription('this is a new coded list from eslam elshamy')
+        codedlist.setEditablebutton()
+        codedlist.setSearchablebutton()
+        codedlist.setPrintablebutton()
+        codedlist.setNextButtonCodedlistInfoStep()
+        codedlist.setSaveButton()
+        codedlist.setManageButton(0)
+        codedlist.setUploadCSVFile('replace.csv')
+        codedlist.setConfirmButton()
+        codedlist.setSuccessfullyAddedMessageIsdisplayed()
+        codedlist.setManageSaveButton()
+      
+      })
+
+      it('TC8-check that the user can Append csv file in manage table', () => {
+        codedlist.setClickOnCodedListsButton()
+        codedlist.setCreateNewCodedListButton()
+        codedlist.setSelectLanguage()
+        codedlist.setClickOnNextButton()
+        codedlist.setCodedListName(faker.person.lastName())
+        codedlist.setAlias('Coded List')
+        codedlist.setCodedListDescription('this is a new coded list from eslam elshamy')
+        codedlist.setEditablebutton()
+        codedlist.setSearchablebutton()
+        codedlist.setPrintablebutton()
+        codedlist.setNextButtonCodedlistInfoStep()
+        codedlist.setSaveButton()
+        codedlist.setManageButton(0)
+        codedlist.setUploadCSVFile('replace.csv')
+        codedlist.setUploadType('Replace')
+        codedlist.setConfirmButton()
+        codedlist.setSuccessfullyAddedMessageIsdisplayed()
+        codedlist.setManageSaveButton()
+        codedlist.setManageButton(0)
+        codedlist.setUploadCSVFile('Append.csv')
+        codedlist.setUploadType('Append')
+        codedlist.setConfirmButton()
+        codedlist.setSuccessfullyAddedMessageIsdisplayed()
+      
+      
+      })
+
+      it('TC9-check that the user can Add smart csv file in manage table', () => {
+      
+        codedlist.setClickOnCodedListsButton()
+        codedlist.setCreateNewCodedListButton()
+        codedlist.setSelectLanguage()
+        codedlist.setClickOnNextButton()
+        codedlist.setCodedListName(faker.person.lastName())
+        codedlist.setAlias('Coded List')
+        codedlist.setCodedListDescription('this is a new coded list from eslam elshamy')
+        codedlist.setEditablebutton()
+        codedlist.setSearchablebutton()
+        codedlist.setPrintablebutton()
+        codedlist.setNextButtonCodedlistInfoStep()
+        codedlist.setSaveButton()
+        codedlist.setManageButton(0)
+        codedlist.setUploadCSVFile('replace.csv')
+        codedlist.setUploadType('Replace')
+        codedlist.setConfirmButton()
+        codedlist.setSuccessfullyAddedMessageIsdisplayed()
+        codedlist.setManageSaveButton()
+        codedlist.setManageButton(0)
+        codedlist.setUploadCSVFile('Smart.csv')
+        codedlist.setUploadType('Smart Upload')
+        codedlist.setConfirmButton()
+        codedlist.setSuccessfullyAddedMessageIsdisplayed()
+      
+      
+      })
+
+
+      it('TC10-check that the user can download tha table in manage page', () => {
+      
+        
+        codedlist.setClickOnCodedListsButton()
+        codedlist.setCreateNewCodedListButton()
+        codedlist.setSelectLanguage()
+        codedlist.setClickOnNextButton()
+        codedlist.setCodedListName(faker.person.lastName())
+        codedlist.setAlias('Coded List')
+        codedlist.setCodedListDescription('this is a new coded list from eslam elshamy')
+        codedlist.setEditablebutton()
+        codedlist.setSearchablebutton()
+        codedlist.setPrintablebutton()
+        codedlist.setNextButtonCodedlistInfoStep()
+        codedlist.setSaveButton()
+        codedlist.setManageButton(0)
+        codedlist.setUploadCSVFile('replace.csv')
+        codedlist.setUploadType('Replace')
+        codedlist.setConfirmButton()
+        codedlist.setDownloadCSVFile()
+        // Assert that the file is downloaded successfully 
+        cy.verifyDownload('Coded List.csv');
+
+      })
+
+      it('TC11-check that the ID is unique ', () => {
+      
+        codedlist.setClickOnCodedListsButton()
+        codedlist.setCreateNewCodedListButton()
+        codedlist.setSelectLanguage()
+        codedlist.setClickOnNextButton()
+        codedlist.setCodedListName(faker.person.lastName())
+        codedlist.setAlias('Coded List')
+        codedlist.setCodedListDescription('this is a new coded list from eslam elshamy')
+        codedlist.setEditablebutton()
+        codedlist.setSearchablebutton()
+        codedlist.setPrintablebutton()
+        codedlist.setNextButtonCodedlistInfoStep()
+        codedlist.setSaveButton()
+        codedlist.setManageButton(0)
+        codedlist.setAddNewRowButton()
+        codedlist.setEnterID('1000','1000')
+        codedlist.setManageSaveButton()
+        // Assert that validation icon is displayed 
+        cy.get('i[data-tip="IDs must be unique"]').should('be.visible')
+        
+
+      })
+
+
+
+       
 
     })
    

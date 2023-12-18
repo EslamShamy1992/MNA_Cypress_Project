@@ -78,9 +78,52 @@ export default class{
         cy.get('span[class="SectionHeader_title__bj5EQ"]').should('be.visible')
     }
     
+    setManageButton(num){
+
+        cy.get('button[id="mna.catalogues.common.cards.btnManage"]').eq(num).click()
+    }
     
+    setUploadCSVFile(uploadfile){
+        cy.get('input[id="uploadLookupFile"]').attachFile(uploadfile)
+    }
 
 
+    setUploadButton(){
 
+        cy.get('label[class="FileInput_button__MLBOr undefined"]').click()
+    }
+
+
+    setUploadType(select){
+
+        cy.get('select[name="uploadType"]').select(select)
+    }
+    setConfirmButton(){
+
+        cy.get('.col-md-2 > .mna-btn-secondary').click()
+    }
+
+
+    setSuccessfullyAddedMessageIsdisplayed(){
+        cy.get('.alert-success > .Notifications_message__-4Kx8').should('be.visible')
+    }
+
+    setDownloadCSVFile(){
+        cy.get('a[id="mna.catalogues.contribution.lookups.manageTable.downloadBtn"]').click()
+    }
+    setManageSaveButton(){
+
+        cy.get('button[id="mna.catalogues.contribution.lookups.manageTable.saveBtn"]').click()
+    }
+
+    setAddNewRowButton(){
+
+        cy.get('button[id="mna.contribution.plugin.addRowBtn"]').click()
+    }
     
+    setEnterID(id1,id2){
+
+        cy.get('input[id="lookup-table.id.1"]').clear().type(id1)
+        cy.get('input[id="lookup-table.id.2"]').clear().type(id2)
+    }
 }

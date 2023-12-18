@@ -1,4 +1,5 @@
 const { defineConfig } = require("cypress");
+const {verifyDownloadTasks}= require('cy-verify-downloads')
 
 
 
@@ -8,7 +9,11 @@ module.exports = defineConfig({
   e2e: {
     "baseUrl": "http://devstable.eastus.cloudapp.azure.com:8083",
     "defaultCommandTimeout": 10000,
-    "experimentalRunAllSpecs": true
+    "experimentalRunAllSpecs": true,
+    setupNodeEvents(on,config){
+      on('task',verifyDownloadTasks)
+    }
+   
    
   },
 });
