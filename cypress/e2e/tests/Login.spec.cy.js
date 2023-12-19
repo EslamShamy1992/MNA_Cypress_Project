@@ -37,7 +37,7 @@ describe('Login Test Cases', () => {
      
     })
 
-    it.only('TC3-check login as Individual User with a valid data ', () => {
+    it('TC3-check login as Individual User with a valid data ', () => {
       register.setClickOnIndividualUser()
       login.setEnterUserName()
       login.setEnterUserPassword()
