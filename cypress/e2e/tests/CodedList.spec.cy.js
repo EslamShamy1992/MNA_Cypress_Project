@@ -124,7 +124,7 @@ const loginpage= new LoginPage()
  
       })
 
-      it.only('TC7-check that the user can upload and replace csv file in manage table', () => {
+      it('TC7-check that the user can upload and replace csv file in manage table', () => {
       
         codedlist.setClickOnCodedListsButton()
         codedlist.setCreateNewCodedListButton()

@@ -41,7 +41,7 @@ export class LoginPage {
     }
 
     setClickOnOrgLoginButton(){
-       cy.get('.mna-btn-primary').click()
+       cy.get('button[class="mna-btn-primary mna-btn-md"]').click()
     }
 
 
@@ -73,7 +73,7 @@ export class LoginPage {
 
     setConfirmationMessageIsDisplayed(){
 
-      cy.get('.flex-grow-1').should('be.visible') 
+      cy.get('.modal-body > p').should('be.visible') 
     }
 
 
