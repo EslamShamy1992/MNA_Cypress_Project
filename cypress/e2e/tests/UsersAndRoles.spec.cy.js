@@ -58,7 +58,7 @@ describe('Users And Roles Test Cases', () => {
 
   })
 
-  it.only('TC1-check adding a new role by entering whitespaces in the manadatory fields  ', () => {
+  it.only('TC4-check adding a new role by entering whitespaces in the manadatory fields  ', () => {
 
     homepage.setUsersAndRolesButton()
     usersAndroles.setAddRoleButton()
@@ -72,7 +72,7 @@ describe('Users And Roles Test Cases', () => {
 
   })
 
-  it.only('TC1-check leave all mandatory fields empty in add new role page', () => {
+  it.only('TC5-check leave all mandatory fields empty in add new role page', () => {
 
     homepage.setUsersAndRolesButton()
     usersAndroles.setAddRoleButton()
@@ -81,7 +81,7 @@ describe('Users And Roles Test Cases', () => {
     cy.get('.SectionHeader_title__bj5EQ').should('be.visible')
   })
 
-  it('TC4-check adding a new user', () => {
+  it('TC6-check adding a new user', () => {
 
     homepage.setUsersAndRolesButton()
     usersAndroles.setUsersButton()
@@ -101,7 +101,7 @@ describe('Users And Roles Test Cases', () => {
 
   })
 
-  it('TC5-check delete a user ', () => {
+  it('TC7-check delete a user ', () => {
 
     homepage.setUsersAndRolesButton()
     usersAndroles.setUsersButton()
@@ -112,7 +112,7 @@ describe('Users And Roles Test Cases', () => {
 
   })
 
-  it('TC6-check edit a user data ', () => {
+  it('TC8-check edit a user data ', () => {
 
     homepage.setUsersAndRolesButton()
     usersAndroles.setUsersButton()
@@ -133,7 +133,7 @@ describe('Users And Roles Test Cases', () => {
   })
 
 
-  it('TC7-check add new user while leaving all mandatory fields empty', () => {
+  it('TC9-check add new user while leaving all mandatory fields empty', () => {
 
     homepage.setUsersAndRolesButton()
     usersAndroles.setUsersButton()
@@ -144,7 +144,7 @@ describe('Users And Roles Test Cases', () => {
 
   })
 
-  it('TC8-check skip all the mandatory fields by entering whitespaces in add user page', () => {
+  it('TC10-check skip all the mandatory fields by entering whitespaces in add user page', () => {
 
     homepage.setUsersAndRolesButton()
     usersAndroles.setUsersButton()
@@ -165,7 +165,7 @@ describe('Users And Roles Test Cases', () => {
   })
 
 
-  it('TC9-check that export all users data functionality is working correctly ', () => {
+  it('TC11-check that export all users data functionality is working correctly ', () => {
 
     homepage.setUsersAndRolesButton()
     usersAndroles.setUsersButton()

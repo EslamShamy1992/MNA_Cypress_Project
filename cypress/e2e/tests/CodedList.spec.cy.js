@@ -263,14 +263,11 @@ const loginpage= new LoginPage()
         usersAndroles.setDataManagerCheckBox()
         usersAndroles.setSaveButton()
         codedlist.setClickOnCodedListsButton()
+        // Assert that manage button is disabled for non data manager 
         cy.get('button[id="mna.catalogues.common.cards.btnManage"]').should('be.disabled')
         
        
-      
-       
-        
-        
-
+ 
       })
 
 
