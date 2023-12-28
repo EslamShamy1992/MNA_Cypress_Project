@@ -37,7 +37,10 @@ setClickOnProfileMenu(){
 
     }
 
-    
+    setUsersAndRolesButton(){
+
+        cy.get('a[href="/penta-app-admin-guardian/UserManagement"]').click({force:true})
+    }
 
 
 

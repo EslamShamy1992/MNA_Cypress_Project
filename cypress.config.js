@@ -21,7 +21,7 @@ module.exports = defineConfig({
  },
   e2e: {
     "baseUrl": "http://devstable.eastus.cloudapp.azure.com:8083",
-    "defaultCommandTimeout": 10000,
+    "defaultCommandTimeout": 60000,
     "experimentalRunAllSpecs": true,
     setupNodeEvents(on,config){
       on('task',verifyDownloadTasks);

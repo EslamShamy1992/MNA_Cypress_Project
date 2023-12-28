@@ -83,6 +83,7 @@ export default class{
         cy.get('button[id="mna.catalogues.common.cards.btnManage"]').eq(num).click()
     }
     
+    
     setUploadCSVFile(uploadfile){
         cy.get('input[id="uploadLookupFile"]').attachFile(uploadfile)
     }

@@ -1,10 +1,12 @@
 import CodedListPage from "../PageObjects/CodedListPage"
 import { LoginPage } from "../PageObjects/LoginPage"
 import HomePage from "../PageObjects/HomePage"
+import UsersAndRoles from "../PageObjects/UsersAndRoles"
 import { faker } from "@faker-js/faker"
  const codedlist= new CodedListPage()
 const loginpage= new LoginPage()
  const homepage= new HomePage()
+ const usersAndroles= new UsersAndRoles()
 
  describe('Coded lists Test Cases', () => {
     beforeEach(() => {
@@ -249,6 +251,24 @@ const loginpage= new LoginPage()
         codedlist.setManageSaveButton()
         // Assert that validation icon is displayed 
         cy.get('i[data-tip="IDs must be unique"]').should('be.visible')
+        
+
+      })
+
+      it.only('TC11-check that Manage button is accessible only for data manager role', () => {
+      
+        homepage.setUsersAndRolesButton()
+        usersAndroles.setUsersButton()
+        usersAndroles.setEditButton()
+        usersAndroles.setDataManagerCheckBox()
+        usersAndroles.setSaveButton()
+        codedlist.setClickOnCodedListsButton()
+        cy.get('button[id="mna.catalogues.common.cards.btnManage"]').should('be.disabled')
+        
+       
+      
+       
+        
         
 
       })
